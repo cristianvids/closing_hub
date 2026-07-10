@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Video sales letter placeholder poster">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A1A1F"/>
+      <stop offset="1" stop-color="#0A0A0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <text x="640" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="34" fill="#6b7280" font-weight="600">VSL placeholder</text>
+  <text x="640" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="#4b5563">Swap vsl.videoUrl in content.ts (Loom / YouTube / Vimeo)</text>
+</svg>
