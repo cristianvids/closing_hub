@@ -18,7 +18,10 @@ npm run dev
 ```
 
 Open <http://localhost:3000>. The page ships with realistic placeholder content
-so it looks real out of the box.
+so it looks real out of the box. The placeholder copy is written for a
+**mentorship-trained closer coming up from appointment setting** — skill proven
+via a roleplay close and call breakdown, setting stats as the credibility floor.
+Keep every claim honest; hiring managers verify everything on the first call.
 
 Other commands:
 
@@ -43,13 +46,15 @@ Here's what each section controls:
 | Field in `content.ts` | Controls |
 | --- | --- |
 | `identity` | Your name, positioning label ("handle"), and tagline. |
-| `hero` | The big above-the-fold headline, subheadline, and primary button text. |
-| `vsl` | Your video sales letter (click-to-play). `videoUrl` + optional `poster`. |
+| `hero` | The big above-the-fold headline, subheadline, and both button labels (`ctaText`, `secondaryCtaText`). |
+| `vsl` | Your video sales letter (click-to-play). `videoUrl`, optional `poster`, and the `caption` under it. |
 | `stats` | The metrics row. Each item: `{ prefix?, value, suffix?, label }`. |
-| `proofVideos` | The two centerpiece videos — (1) a raw close, (2) your breakdown — each with a one-line `caption`. |
+| `proof` | The proof section's `eyebrow`, `heading`, and `intro` paragraph. |
+| `proofVideos` | The two centerpiece videos — each with a chip `label` and one-line `caption`. Default setup: (1) a roleplay close, (2) a call breakdown. |
+| `socialProof` | The testimonial section's `eyebrow` and `heading`. |
 | `testimonials` | Social-proof cards. Mix `type: 'text'` quotes and `type: 'image'` screenshots (see below). |
 | `about` | Bio, optional `photoUrl`, `credentials` list, and `cvUrl` (your CV PDF). |
-| `contact` | `lookingFor` line + `calendlyUrl`, `whatsapp`, `email` for the call section. |
+| `contact` | The closing `heading`, `lookingFor` line + `calendlyUrl`, `whatsapp`, `email`. |
 | `social` | Footer social links. |
 | `seo` | Link-preview title/description, optional `ogImage`, and your final `siteUrl`. |
 | `theme.accentColor` | One hex value that recolors the entire site. |
@@ -78,8 +83,20 @@ Vimeo** share link — paste it as-is. The site parses it and embeds correctly.
 ```
 
 Videos are **click-to-play** — nothing loads until the visitor taps play, and it
-never autoplays with sound. For the proof section, use (1) a raw recording of a
-real close and (2) a video where you break that call down.
+never autoplays with sound.
+
+**What to record for the proof section** (the captions in `content.ts` double as
+your recording brief):
+
+1. **The roleplay close** — a full mock sales call in one take, no edits:
+   discovery → pitch → at least two objections → the close. Have a friend or
+   your mentor play the prospect and tell them to push back for real. Unedited
+   matters: it's what makes it credible. Once you have real closing calls on an
+   offer (and permission to share), swap this for a raw recording of a real close.
+2. **The breakdown** — you on camera analyzing a sales call (one of your own, or
+   a public one): call out the framing, tonality shifts, and pivots and why they
+   work. This shows sales IQ, which is exactly what a manager is trying to assess
+   in a beginner.
 
 ### Images (testimonials + headshot)
 

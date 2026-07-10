@@ -61,16 +61,16 @@ function TestimonialCard({ item }: { item: Testimonial }) {
 }
 
 export function SocialProof() {
-  const { testimonials } = content;
+  const { socialProof, testimonials } = content;
 
   return (
     <Section id="results" ariaLabel="Testimonials and results">
       <Reveal className="text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-          Social proof
+          {socialProof.eyebrow}
         </p>
         <h2 className="mx-auto mt-4 max-w-2xl text-balance text-3xl font-bold tracking-tight sm:text-5xl">
-          Results and receipts.
+          {socialProof.heading}
         </h2>
       </Reveal>
 

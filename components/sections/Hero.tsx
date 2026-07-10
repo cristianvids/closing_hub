@@ -44,7 +44,7 @@ export function Hero() {
                 external={false}
                 className="w-full sm:w-auto"
               >
-                See the proof
+                {hero.secondaryCtaText}
               </CTAButton>
             </div>
           </Reveal>
@@ -56,9 +56,7 @@ export function Hero() {
               poster={vsl.poster}
               title={`${identity.name} — video sales letter`}
             />
-            <p className="mt-3 text-sm text-white/40">
-              ▶ Tap to watch my 90-second intro
-            </p>
+            <p className="mt-3 text-sm text-white/40">{vsl.caption}</p>
           </Reveal>
         </div>
       </Section>

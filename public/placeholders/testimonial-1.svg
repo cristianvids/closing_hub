@@ -4,8 +4,8 @@
   <circle cx="80" cy="75" r="16" fill="#26262D"/>
   <rect x="112" y="62" width="200" height="12" rx="6" fill="#2f2f37"/>
   <rect x="112" y="84" width="140" height="10" rx="5" fill="#26262D"/>
-  <text x="640" y="82" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#2E6BFF">$48,000</text>
+  <text x="640" y="82" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#2E6BFF">230+ sets</text>
   <rect x="40" y="150" width="720" height="330" rx="12" fill="#0F0F12"/>
   <text x="400" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="600" fill="#6b7280">Results screenshot placeholder</text>
-  <text x="400" y="338" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#4b5563">Replace with a real (redacted) Stripe / dashboard screenshot</text>
+  <text x="400" y="338" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#4b5563">Replace with a real (redacted) CRM / booked-calls screenshot</text>
 </svg>

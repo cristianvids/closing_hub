@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { VideoEmbed } from "@/components/ui/VideoEmbed";
 
 export function ProofOfSkill() {
-  const { proofVideos, identity } = content;
+  const { proof, proofVideos, identity } = content;
 
   return (
     <Section id="proof" className="relative">
@@ -17,14 +17,13 @@ export function ProofOfSkill() {
       <div className="relative">
         <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-            Proof of skill
+            {proof.eyebrow}
           </p>
           <h2 className="mx-auto mt-4 max-w-2xl text-balance text-3xl font-bold tracking-tight sm:text-5xl">
-            Don&apos;t take my word for it. Watch me close.
+            {proof.heading}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-white/55">
-            A real call, and my breakdown of exactly what made it land. This is
-            the part most closers can&apos;t show you.
+            {proof.intro}
           </p>
         </Reveal>
 
@@ -40,14 +39,12 @@ export function ProofOfSkill() {
                   {i + 1}
                 </span>
                 <span className="text-sm font-medium text-white/50">
-                  {i === 0 ? "The raw close" : "The breakdown"}
+                  {video.label}
                 </span>
               </div>
               <VideoEmbed
                 url={video.url}
-                title={`${identity.name} — ${
-                  i === 0 ? "raw close" : "call breakdown"
-                }`}
+                title={`${identity.name} — ${video.label}`}
               />
               <p className="mt-4 text-pretty text-base leading-relaxed text-white/70">
                 {video.caption}

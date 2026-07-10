@@ -41,7 +41,7 @@ export function Contact() {
         <div className="relative">
           <Reveal>
             <h2 className="mx-auto max-w-2xl text-balance text-3xl font-bold tracking-tight sm:text-5xl">
-              Let&apos;s put me on your offer.
+              {contact.heading}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-pretty text-lg text-white/60">
               {contact.lookingFor}

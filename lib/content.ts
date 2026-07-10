@@ -9,6 +9,11 @@
  *  Anything marked `// REPLACE:` is placeholder content you should swap for
  *  your real details before going live. See the README for a field-by-field
  *  guide and instructions for swapping in real videos / images / your CV.
+ *
+ *  POSITIONING NOTE: this copy is written for a mentorship-trained closer
+ *  coming up from setting — skill proven on roleplays, real phone hours from
+ *  setting, closing track record still being built. Keep every claim honest:
+ *  hiring managers verify everything on the first call.
  * ============================================================================
  */
 
@@ -17,7 +22,7 @@
 export interface Identity {
   /** Your name, shown in the hero and footer. */
   name: string;
-  /** Short handle / positioning label, e.g. "High-Ticket Closer". */
+  /** Short handle / positioning label, e.g. "Trained High-Ticket Closer". */
   handle: string;
   /** One-line tagline used in meta + subtle places. */
   tagline: string;
@@ -30,6 +35,8 @@ export interface Hero {
   subheadline: string;
   /** Primary button label, e.g. "Book a call". */
   ctaText: string;
+  /** Secondary button label, scrolls to the proof section. */
+  secondaryCtaText: string;
 }
 
 export interface Vsl {
@@ -37,10 +44,12 @@ export interface Vsl {
   videoUrl: string;
   /** Optional poster image shown before play (path under /public or full URL). */
   poster?: string;
+  /** Small caption under the VSL embed. */
+  caption: string;
 }
 
 export interface Stat {
-  /** The number as a string, e.g. "82", "1.2", "27". Count-up parses this. */
+  /** The number as a string, e.g. "78", "1.2", "230". Count-up parses this. */
   value: string;
   /** Optional prefix, e.g. "$". */
   prefix?: string;
@@ -53,8 +62,26 @@ export interface Stat {
 export interface ProofVideo {
   /** Loom / YouTube / Vimeo URL. */
   url: string;
+  /** Short chip label above the video, e.g. "The roleplay close". */
+  label: string;
   /** One line stating exactly what this video demonstrates. */
   caption: string;
+}
+
+export interface ProofSection {
+  /** Small uppercase eyebrow above the heading. */
+  eyebrow: string;
+  /** The section heading. This is your strongest claim — make it land. */
+  heading: string;
+  /** One or two supporting sentences under the heading. */
+  intro: string;
+}
+
+export interface SocialProofSection {
+  /** Small uppercase eyebrow above the heading. */
+  eyebrow: string;
+  /** The section heading. */
+  heading: string;
 }
 
 export interface TextTestimonial {
@@ -63,13 +90,13 @@ export interface TextTestimonial {
   content: string;
   /** Who said it. */
   author: string;
-  /** Optional headline result, e.g. "$48k closed in 30 days". */
+  /** Optional headline result, e.g. "94% show rate, 3 months straight". */
   result?: string;
 }
 
 export interface ImageTestimonial {
   type: "image";
-  /** Path under /public or a full URL. A screenshot of a paycheck / DM / result. */
+  /** Path under /public or a full URL. A screenshot of a leaderboard / DM / results. */
   imageUrl: string;
   /** Alt text (required for accessibility). */
   alt: string;
@@ -82,11 +109,11 @@ export interface ImageTestimonial {
 export type Testimonial = TextTestimonial | ImageTestimonial;
 
 export interface About {
-  /** A few tight lines. Who you are and why you close. */
+  /** A few tight lines. Who you are and why you're a safe bet. */
   bio: string;
   /** Optional headshot (path under /public or full URL). */
   photoUrl?: string;
-  /** Key credentials / offers you've closed for. */
+  /** Key credentials: training, setting experience, tools, availability. */
   credentials: string[];
   /** Link to your CV/resume PDF (path under /public or full URL). */
   cvUrl: string;
@@ -98,7 +125,9 @@ export interface SocialLink {
 }
 
 export interface Contact {
-  /** One line on the type of offer / availability you're after. */
+  /** The closing section heading — your ask, stated with confidence. */
+  heading: string;
+  /** One line on the type of seat / arrangement you're after. */
   lookingFor: string;
   /** Calendly (or any booking) URL. */
   calendlyUrl: string;
@@ -132,7 +161,9 @@ export interface SiteContent {
   hero: Hero;
   vsl: Vsl;
   stats: Stat[];
+  proof: ProofSection;
   proofVideos: ProofVideo[];
+  socialProof: SocialProofSection;
   testimonials: Testimonial[];
   about: About;
   contact: Contact;
@@ -147,97 +178,122 @@ export const content: SiteContent = {
   identity: {
     name: "Alex Rivera", // REPLACE: your name
     handle: "High-Ticket Closer", // REPLACE: your positioning label
-    tagline: "I turn booked calls into collected cash.", // REPLACE
+    tagline: "Trained to close. Proven on the phones.", // REPLACE
   },
 
   hero: {
-    // REPLACE: the single most important line on the page — who you are + the promise.
-    headline: "I close high-ticket offers so founders keep building, not selling.",
-    // REPLACE: supporting line — add specificity that builds instant credibility.
+    // REPLACE: the single most important line on the page — trained skill + the honest ask.
+    headline: "Trained 1-on-1 to close. All I'm missing is your offer.",
+    // REPLACE: stack your three credibility pillars — setting hours, mentorship, proof below.
     subheadline:
-      "5+ years on the phones for coaching, agency, and SaaS offers. 82% show-to-close on qualified calls, $2M+ collected. Watch a real close below.",
+      "8 months as an appointment setter on a high-ticket coaching offer — 230+ sets booked at a 78% show rate. Then I invested in 1-on-1 closing mentorship instead of waiting for someone to train me. Watch me run a full close below.",
     ctaText: "Book a call", // REPLACE if you prefer different wording
+    secondaryCtaText: "Watch me close",
   },
 
   vsl: {
     // REPLACE: your VSL. Accepts Loom, YouTube, or Vimeo URLs.
     videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     poster: "/placeholders/vsl-poster.svg", // REPLACE: optional custom poster
+    caption: "▶ Tap to watch my 90-second pitch",
   },
 
-  // REPLACE all values below with your real numbers.
+  // REPLACE all values below with your real setting numbers. These are metrics
+  // you actually own — don't inflate them, they get verified.
   stats: [
-    { value: "82", suffix: "%", label: "Close rate on qualified calls" },
-    { prefix: "$", value: "2.1", suffix: "M", label: "Cash collected" },
-    { prefix: "$", value: "6.5", suffix: "K", label: "Avg. deal size" },
-    { value: "1,400", suffix: "+", label: "Calls taken" },
+    { value: "1,200", suffix: "+", label: "Dials made" },
+    { value: "230", suffix: "+", label: "Sets booked" },
+    { value: "78", suffix: "%", label: "Show rate on my sets" },
+    { prefix: "$", value: "180", suffix: "K", label: "Revenue closed off my sets" },
   ],
 
-  // REPLACE both URLs + captions. (a) a raw real close, (b) your breakdown of it.
+  proof: {
+    eyebrow: "Proof of skill",
+    // REPLACE if you want different wording — this is your strongest claim.
+    heading: "Skill isn't the question. Watch me close.",
+    intro:
+      "No cherry-picked highlight reel — I don't have a thousand logged closes yet, and I won't pretend to. Instead: a full unedited roleplay close, and a breakdown that shows you how I think on a call.",
+  },
+
+  // REPLACE both URLs. The captions below double as your recording brief:
+  // (1) a full mock sales call — discovery → pitch → objections → close, one take;
+  // (2) you analyzing a sales call on camera, showing your read of the game.
   proofVideos: [
     {
       url: "https://www.loom.com/share/00000000000000000000000000000000",
+      label: "The roleplay close",
       caption:
-        "Raw recording of a live close — objection handling on price to a signed $8k deal.",
+        "A full mock sales call, one take, no edits — discovery, pitch, two price objections, and the close. Exactly how I'd run it on your offer.",
     },
     {
       url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      label: "The breakdown",
       caption:
-        "My breakdown of the call above — the exact framing, tonality, and pivots that landed it.",
+        "Me breaking down a sales call — the framing, tonality shifts, and pivots that make it land. This is the sales IQ your closers either have or don't.",
     },
   ],
 
-  // REPLACE with your real testimonials. Mix text quotes and image screenshots.
-  // For image cards, drop the file in /public/placeholders and point imageUrl at it.
-  // PRIVACY: redact client names on any paycheck / DM screenshots before uploading.
+  socialProof: {
+    eyebrow: "Social proof",
+    heading: "What the people I've worked for say.",
+  },
+
+  // REPLACE with your real testimonials: your setting manager on work ethic and
+  // numbers, your closing mentor on skill, plus screenshots (leaderboards,
+  // booked-calls dashboards, manager DMs).
+  // PRIVACY: redact names and personal info on any screenshots before uploading.
   testimonials: [
     {
       type: "text",
       content:
-        "Alex plugged into our offer and was closing at a higher rate than our founder within two weeks. Total pro on the phones.",
-      author: "Jordan M. — Coaching offer owner",
-      result: "$120k added in 60 days",
+        "Alex was the most consistent setter on my team — first on the dialer every morning, best show rate, zero excuses. When he told me he'd been training to close, I wasn't surprised. He'll outwork your whole floor.",
+      author: "Jordan M. — Sales manager, coaching offer", // REPLACE
+      result: "78% show rate, 8 months straight",
     },
     {
       type: "image",
       imageUrl: "/placeholders/testimonial-1.svg",
-      alt: "Screenshot of a Stripe dashboard showing collected payments (client details redacted).",
-      author: "Stripe — collected payments",
-      result: "$48k collected in one month",
+      alt: "Screenshot of a booked-calls dashboard showing appointment-setting results (details redacted).",
+      author: "CRM — sets booked", // REPLACE
+      result: "230+ qualified sets",
     },
     {
       type: "text",
       content:
-        "Reliable, coachable, and hungry. Showed up to every call prepared and never needed hand-holding on follow-up.",
-      author: "Sam K. — Agency sales lead",
+        "I've trained a lot of closers 1-on-1. Alex runs a cleaner discovery than most people already taking calls. He doesn't need more training — he needs live reps on a real offer.",
+      author: "Sam K. — Closing mentor", // REPLACE with your mentor's name/program
     },
     {
       type: "image",
       imageUrl: "/placeholders/testimonial-2.svg",
-      alt: "Screenshot of a client DM praising the closer's performance (name redacted).",
-      author: "Client DM",
-      result: "Top closer, 2 months running",
+      alt: "Screenshot of a message from a sales manager praising performance (name redacted).",
+      author: "Manager DM", // REPLACE
+      result: "Top setter, 3 months running",
     },
   ],
 
   about: {
-    // REPLACE: a few tight lines. Lead with proof, not life story.
-    bio: "I'm a high-ticket closer with 5+ years selling coaching, agency, and SaaS offers between $3k–$25k. I live in the CRM, tighten follow-up, and treat every booked call like it's the only one that matters.",
+    // REPLACE: a few tight lines. The angle: you didn't wait to be developed —
+    // you built the skill on your own dime, and setting proved the work ethic.
+    bio: "I spent 8 months setting for a high-ticket coaching offer — living in the CRM, tightening follow-up, and listening to every closer's calls after my shift. Instead of waiting for a company to develop me, I paid for 1-on-1 closing mentorship and drilled roleplays daily. The skill is built. Now I want the seat to prove it.",
     photoUrl: "/placeholders/headshot.svg", // REPLACE: your headshot (optional)
     credentials: [
-      // REPLACE with your real credentials / offers you've closed for.
-      "Closed for 3 offers doing $200k+/mo",
-      "Trained by [program / mentor]",
+      // REPLACE with your real credentials.
+      "1-on-1 closing mentorship with [mentor/program]",
+      "8 months setting for a $200k+/mo offer",
+      "Daily live roleplay reps",
       "Fluent in HighLevel, Close, HubSpot",
-      "Available 30+ dials/day, timezone-flexible",
+      "Available full-time, timezone-flexible",
     ],
     cvUrl: "/placeholders/cv.pdf", // REPLACE: your CV/resume PDF
   },
 
   contact: {
-    // REPLACE: one line on exactly what you want next.
+    heading: "Give me a seat. I'll earn the keep.",
+    // REPLACE: your honest ask — closing seat or setter-to-closer ramp, and how
+    // you de-risk the hire (commission trial, start on sets, etc.).
     lookingFor:
-      "Looking to join one strong offer as a commission (or base + commission) closer. Available to start immediately.",
+      "Looking for a closing seat — or a setter-to-closer ramp — on a proven offer. I'll take a commission-only trial to prove it: you risk nothing, I close or I don't. Available to start immediately.",
     calendlyUrl: "https://calendly.com/your-handle/intro", // REPLACE
     whatsapp: "15551234567", // REPLACE: intl format, digits only (no + or spaces)
     email: "you@example.com", // REPLACE
@@ -254,7 +310,7 @@ export const content: SiteContent = {
     // REPLACE all of these before launch.
     title: "Alex Rivera — High-Ticket Closer",
     description:
-      "82% close rate. $2M+ collected. Watch a real close, then book a call. High-ticket closer available now.",
+      "Mentorship-trained closer with 8 months of real phone hours setting. Watch a full roleplay close, then book a call. Available now.",
     // ogImage: "/placeholders/og.png", // Optional. Leave commented to auto-generate.
     siteUrl: "https://your-domain.com", // REPLACE with your deployed URL
   },
