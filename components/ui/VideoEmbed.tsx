@@ -71,7 +71,7 @@ export function VideoEmbed({ url, title, poster, className = "" }: VideoEmbedPro
 
           {provider === "unknown" && (
             <span className="absolute bottom-3 left-1/2 z-10 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-xs text-white/70">
-              Add a Loom, YouTube, or Vimeo URL in content.ts
+              Add a Loom, YouTube, Vimeo, or Fathom URL in content.ts
             </span>
           )}
         </button>

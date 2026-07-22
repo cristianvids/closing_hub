@@ -1,13 +1,15 @@
 /**
- * Parses a Loom / YouTube / Vimeo share URL into an embeddable iframe URL.
- * Used by VideoEmbed so you can paste a normal share link into content.ts.
+ * Parses a Loom / YouTube / Vimeo / Fathom share URL into an embeddable iframe
+ * URL. Used by VideoEmbed so you can paste a normal share link into content.ts.
  *
  * Supported inputs:
  *   - YouTube:  https://www.youtube.com/watch?v=ID | https://youtu.be/ID
  *   - Vimeo:    https://vimeo.com/ID
  *   - Loom:     https://www.loom.com/share/ID
+ *   - Fathom:   https://fathom.video/share/ID | https://fathom.video/embed/ID
+ *               | https://fathom.video/calls/ID
  */
-export type VideoProvider = "youtube" | "vimeo" | "loom" | "unknown";
+export type VideoProvider = "youtube" | "vimeo" | "loom" | "fathom" | "unknown";
 
 export interface ParsedVideo {
   provider: VideoProvider;
@@ -57,6 +59,18 @@ export function parseVideoUrl(url: string, autoplay = false): ParsedVideo {
       return {
         provider: "loom",
         embedUrl: `https://www.loom.com/embed/${id}${
+          autoplay ? "?autoplay=1" : ""
+        }`,
+      };
+    }
+
+    // Fathom — accepts a /share/, /calls/, or already-/embed/ link. The last
+    // path segment is the recording id; we always render the /embed/ form.
+    if (host === "fathom.video") {
+      const id = u.pathname.split("/").filter(Boolean).pop() ?? "";
+      return {
+        provider: "fathom",
+        embedUrl: `https://fathom.video/embed/${id}${
           autoplay ? "?autoplay=1" : ""
         }`,
       };

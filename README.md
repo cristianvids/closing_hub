@@ -71,8 +71,9 @@ whole change — nothing else to touch.
 
 ### Videos (VSL + proof)
 
-`vsl.videoUrl` and each `proofVideos[].url` accept a normal **Loom, YouTube, or
-Vimeo** share link — paste it as-is. The site parses it and embeds correctly.
+`vsl.videoUrl` and each `proofVideos[].url` accept a normal **Loom, YouTube,
+Vimeo, or Fathom** share link — paste it as-is. The site parses it and embeds
+correctly.
 
 ```ts
 // All of these work:
@@ -80,7 +81,13 @@ Vimeo** share link — paste it as-is. The site parses it and embeds correctly.
 "https://youtu.be/XXXXXXXXXXX"
 "https://vimeo.com/123456789"
 "https://www.loom.com/share/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+"https://fathom.video/share/XXXXXXXXXXXXXXXXXXXX"
 ```
+
+> **Fathom:** open the recording → **Share** → set it to **"Anyone with the
+> link"** (required, or the embed shows a login wall) → copy the share link, or
+> use the **Embed** option's `https://fathom.video/embed/...` URL. Either form
+> works — paste it straight into `content.ts`.
 
 Videos are **click-to-play** — nothing loads until the visitor taps play, and it
 never autoplays with sound.
