@@ -176,9 +176,9 @@ export interface SiteContent {
 
 export const content: SiteContent = {
   identity: {
-    name: "Alex Rivera", // REPLACE: your name
+    name: "Cristian Lefter", // REPLACE: your name
     handle: "High-Ticket Closer", // REPLACE: your positioning label
-    tagline: "Trained to close. Proven on the phones.", // REPLACE
+    tagline: "Trained to close. Hungry for results.", // REPLACE
   },
 
   hero: {
@@ -186,7 +186,7 @@ export const content: SiteContent = {
     headline: "Trained 1-on-1 to close. All I'm missing is your offer.",
     // REPLACE: stack your three credibility pillars — setting hours, mentorship, proof below.
     subheadline:
-      "8 months as an appointment setter on a high-ticket coaching offer — 230+ sets booked at a 78% show rate. Then I invested in 1-on-1 closing mentorship instead of waiting for someone to train me. Watch me run a full close below.",
+      "I invested multiple 4 figures in 1-on-1 closing mentorship instead of waiting for someone to train me. 4 months as an appointment setter on a high-ticket sales coaching offer — 270+ sets booked at a 78% show rate. Wanna see my skill? Watch me close down below",
     ctaText: "Book a call", // REPLACE if you prefer different wording
     secondaryCtaText: "Watch me close",
   },
@@ -195,16 +195,16 @@ export const content: SiteContent = {
     // REPLACE: your VSL. Accepts Loom, YouTube, or Vimeo URLs.
     videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     poster: "/placeholders/vsl-poster.svg", // REPLACE: optional custom poster
-    caption: "▶ Tap to watch my 90-second pitch",
+    caption: "▶ Tap to watch",
   },
 
   // REPLACE all values below with your real setting numbers. These are metrics
   // you actually own — don't inflate them, they get verified.
   stats: [
-    { value: "1,200", suffix: "+", label: "Dials made" },
-    { value: "230", suffix: "+", label: "Sets booked" },
+    { value: "1,000", suffix: "+", label: "Conversations had" },
+    { value: "270", suffix: "+", label: "Sets booked" },
     { value: "78", suffix: "%", label: "Show rate on my sets" },
-    { prefix: "$", value: "180", suffix: "K", label: "Revenue closed off my sets" },
+    { prefix: "$", value: "160", suffix: "K", label: "Revenue closed off my sets" },
   ],
 
   proof: {
@@ -220,10 +220,10 @@ export const content: SiteContent = {
   // (2) you analyzing a sales call on camera, showing your read of the game.
   proofVideos: [
     {
-      url: "https://www.loom.com/share/00000000000000000000000000000000",
+      url: "https://fathom.video/share/tKs7bzw64j3SoJyFz1esQf8ssgjZm4iY",
       label: "The roleplay close",
       caption:
-        "A full mock sales call, one take, no edits — discovery, pitch, two price objections, and the close. Exactly how I'd run it on your offer.",
+        "A full mock sales call, one take, no edits — discovery, pitch, objections, and the close. Exactly how I'd run it on your offer.",
     },
     {
       url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -275,14 +275,14 @@ export const content: SiteContent = {
   about: {
     // REPLACE: a few tight lines. The angle: you didn't wait to be developed —
     // you built the skill on your own dime, and setting proved the work ethic.
-    bio: "I spent 8 months setting for a high-ticket coaching offer — living in the CRM, tightening follow-up, and listening to every closer's calls after my shift. Instead of waiting for a company to develop me, I paid for 1-on-1 closing mentorship and drilled roleplays daily. The skill is built. Now I want the seat to prove it.",
+    bio: "Instead of waiting for a company to develop me, I invested multiple 4 figures into a 1-on-1 closing mentorship and drilled roleplays daily. I spent 4 months setting for a high-ticket sales coaching offer — living in the CRM, tightening follow-up, and listening to every closer's calls after my shift. The skill is built. Now I want the seat to prove it.",
     photoUrl: "/placeholders/headshot.svg", // REPLACE: your headshot (optional)
     credentials: [
       // REPLACE with your real credentials.
-      "1-on-1 closing mentorship with [mentor/program]",
-      "8 months setting for a $200k+/mo offer",
+      "1-on-1 closing mentorship with the SC program by @creatorrsmith",
+      "4 months setting high-ticket sales coaching program",
       "Daily live roleplay reps",
-      "Fluent in HighLevel, Close, HubSpot",
+      "Fluent in HighLevel, Close, Mochi",
       "Available full-time, timezone-flexible",
     ],
     cvUrl: "/placeholders/cv.pdf", // REPLACE: your CV/resume PDF
@@ -293,10 +293,10 @@ export const content: SiteContent = {
     // REPLACE: your honest ask — closing seat or setter-to-closer ramp, and how
     // you de-risk the hire (commission trial, start on sets, etc.).
     lookingFor:
-      "Looking for a closing seat — or a setter-to-closer ramp — on a proven offer. I'll take a commission-only trial to prove it: you risk nothing, I close or I don't. Available to start immediately.",
-    calendlyUrl: "https://calendly.com/your-handle/intro", // REPLACE
-    whatsapp: "15551234567", // REPLACE: intl format, digits only (no + or spaces)
-    email: "you@example.com", // REPLACE
+      "Looking for a closing seat — or a setter-to-closer ramp — on a proven offer. Available to start immediately.",
+    calendlyUrl: "https://calendly.com/cristiannvids/45-min-discovery-call", // REPLACE
+    whatsapp: "34640819522", // REPLACE: intl format, digits only (no + or spaces)
+    email: "cristiannvids@gmail.com", // REPLACE
   },
 
   // REPLACE with your real profiles. Remove any you don't use.
@@ -308,9 +308,9 @@ export const content: SiteContent = {
 
   seo: {
     // REPLACE all of these before launch.
-    title: "Alex Rivera — High-Ticket Closer",
+    title: "Cristian Lefter — High-Ticket Closer",
     description:
-      "Mentorship-trained closer with 8 months of real phone hours setting. Watch a full roleplay close, then book a call. Available now.",
+      "Mentorship-trained closer with 4 months of real hours setting. Watch a full roleplay close, then book a call. Available now.",
     // ogImage: "/placeholders/og.png", // Optional. Leave commented to auto-generate.
     siteUrl: "https://your-domain.com", // REPLACE with your deployed URL
   },
