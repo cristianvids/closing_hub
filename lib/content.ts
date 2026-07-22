@@ -276,7 +276,7 @@ export const content: SiteContent = {
     // REPLACE: a few tight lines. The angle: you didn't wait to be developed —
     // you built the skill on your own dime, and setting proved the work ethic.
     bio: "Instead of waiting for a company to develop me, I invested multiple 4 figures into a 1-on-1 closing mentorship and drilled roleplays daily. I spent 4 months setting for a high-ticket sales coaching offer — living in the CRM, tightening follow-up, and listening to every closer's calls after my shift. The skill is built. Now I want the seat to prove it.",
-    photoUrl: "/images/headshot.jpg", // Your headshot — upload the file to public/images/headshot.jpg
+    photoUrl: "/images/5379819930268069833.jpg", // Your headshot — upload the file to public/images/headshot.jpg
     credentials: [
       // REPLACE with your real credentials.
       "1-on-1 closing mentorship with the SC program by @creatorrsmith",
